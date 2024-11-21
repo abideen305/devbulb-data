@@ -1,0 +1,44 @@
+---
+const mediaPartners = [
+  {
+    name: "BusinessDay",
+    logo: "/images/media/businessday.png",
+    url: "https://businessday.ng/companies/article/firms-partner-to-transform-agribusiness/"
+  },
+  {
+    name: "The Guardian",
+    logo: "/images/media/guardian.png",
+    url: "https://guardian.ng/features/agro-care/firms-collaborate-to-revolutionise-agribusiness/"
+  },
+  {
+    name: "PM News",
+    logo: "/images/media/pmnews.png",
+    url: "https://pmnewsnigeria.com/2024/11/13/devbulb-data-motofa-resources-partner-to-revolutionize-agribusiness/"
+  },
+  {
+    name: "The Nation",
+    logo: "/images/media/nation.png",
+    url: "https://thenicheng.com/devbulb-data-motofa-partner-on-supporting-businesses-with-agribusiness-data/"
+  },
+  {
+    name: "Independent",
+    logo: "/images/media/independent.png",
+    url: "https://independent.ng/devbulb-data-motofa-resources-partner-to-revolutionize-agribusiness/"
+  }
+];
+---
+
+<div class="grid grid-cols-2 md:grid-cols-5 gap-8 items-center">
+  {mediaPartners.map(partner => (
+    <a href={partner.url} 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="grayscale hover:grayscale-0 transition-all duration-300">
+      <img 
+        src={partner.logo} 
+        alt={`${partner.name} Logo`} 
+        class="w-full h-auto object-contain"
+      />
+    </a>
+  ))}
+</div>
